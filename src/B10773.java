@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class B10773 {
-    public static int stack[];
+    public static int[] stack;
     public static int pointer = 0;
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -18,6 +18,7 @@ public class B10773 {
                 push(num);
             }
         }
+
         int i = 0;
         while (stack[i] != 0){
             res += stack[i];
