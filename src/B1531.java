@@ -13,14 +13,12 @@ public class B1531 {
             int y1 = sc.nextInt()-1;
             int x2 = sc.nextInt()-1;
             int y2 = sc.nextInt()-1;
-
             for (int j = y1; j <= y2; j++){
                 for (int k = x1; k <= x2; k++){
                     arr[j][k] += 1;
                 }
             }
         }
-
         int cnt = 0;
         for (int i = 0; i < 100; i++){
             for (int j = 0; j < 100; j++){
