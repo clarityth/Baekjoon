@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class B10828 {
+    // 스택
     public static int[] stack;
     public static int size = 0;
 

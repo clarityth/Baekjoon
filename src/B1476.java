@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class B1476 {
+    // 날짜 계산
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int E = sc.nextInt(); // 1 <= E <= 15

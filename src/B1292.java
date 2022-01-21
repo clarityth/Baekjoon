@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class B1292 {
+    // 쉽게 푸는 문제
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();

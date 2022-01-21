@@ -2,6 +2,7 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 public class B2845 {
+    // 파티가 끝나고 난 뒤
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         StringBuilder sb = new StringBuilder();

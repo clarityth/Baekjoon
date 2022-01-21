@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class B10773 {
+    // 제로
     public static int[] stack;
     public static int pointer = 0;
     public static void main(String[] args){

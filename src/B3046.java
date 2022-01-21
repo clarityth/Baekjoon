@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class B3046 {
+    // R2
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int r1 = sc.nextInt();

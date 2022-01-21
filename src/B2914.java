@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class B2914 {
+    // 저작권
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt(); // 수록된 곡의 갯수

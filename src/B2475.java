@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class B2475 {
+    // 검증수
     public static void main (String[] args){
         Scanner sc = new Scanner(System.in);
         int res=0;
