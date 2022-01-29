@@ -8,7 +8,9 @@ public class B10845 {
     public static void main (String[] args){
         Scanner sc = new Scanner(System.in);
         StringBuilder sb = new StringBuilder();
+
         int n = sc.nextInt();
+
         for (int i=0; i<n; i++){
             String str = sc.next();
             switch(str){
@@ -43,6 +45,7 @@ public class B10845 {
         queue[rear++] = x;
         size++;
     }
+
     public static int pop(){
         if (size == 0)
             return -1;
@@ -53,21 +56,25 @@ public class B10845 {
             return item;
         }
     }
+
     public static int size(){
         return size;
     }
+
     public static int empty() {
         if (size == 0)
             return 1;
         else
             return 0;
     }
+
     public static int front() {
         if (size == 0)
             return -1;
         else
             return queue[front];
     }
+
     public static int back() {
         if (size == 0)
             return -1;
