@@ -15,7 +15,7 @@ public class B1531 {
             int y2 = sc.nextInt()-1;
             for (int j = y1; j <= y2; j++){
                 for (int k = x1; k <= x2; k++){
-                    arr[j][k] += 1;
+                    arr[j][k] += 1; // 해당 좌표에 올려진 종이의 갯수
                 }
             }
         }
