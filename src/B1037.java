@@ -13,6 +13,6 @@ public class B1037 {
         Arrays.sort(arr);
         int max = arr[n-1];
         int min = arr[0];
-        System.out.println(max*min);
+        System.out.println(max*min); // 양수 A = 가장 작은 약수 * 가장 큰 약수
     }
 }
