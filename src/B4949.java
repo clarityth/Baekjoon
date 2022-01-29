@@ -8,7 +8,7 @@ public class B4949 {
 
         while (true) {
             String str = sc.nextLine();
-            if (str.equals(".")) {
+            if (str.equals(".")) { // 입력 종료 조건
                 break;
             }
             System.out.println(balance(str));
@@ -20,12 +20,12 @@ public class B4949 {
 
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
-            if (c == '(') {
+            if (c == '(') { // 여는 괄호일 경우, push
                 s.push(c);
             } else if (c == '[') {
                 s.push(c);
             } else if (c == ')') {
-                if (s.empty() || s.peek() != '(') {
+                if (s.empty() || s.peek() != '(') { // 스택이 비었거나, 스택의 top이 여는 괄호가 아닐경우
                     return "no";
                 } else {
                     s.pop();
