@@ -24,7 +24,7 @@ public class B1966 {
                    if (q.get(j)[1] > first[1]) { // 현재 첫번째 문서보다 중요도가 높은 문서가 하나라도 있다면,
                        q.offer(first);           // 큐의 가장 뒤에 재배치
                        for (int k = 0; k < j; k++) {
-                           q.offer(q.poll()); // 중요도가 큰 문서와 첫번째 문서 사이의 문서들
+                           q.offer(q.poll()); // 중요도가 큰 문서와 첫번째 문서 사이의 문서들 재배치
                        }
                        isMax = false;
                        break;
@@ -34,7 +34,7 @@ public class B1966 {
                    continue; // 반복
                }
                cnt++;
-               if (first[0] == m){ // 찾는 문서의 큐의 위치와 현재 첫번째 문서가 일치한다면
+               if (first[0] == m){ // 찾는 문서와 현재 첫번째 문서가 일치한다면
                    break; // 종료
                }
            }
