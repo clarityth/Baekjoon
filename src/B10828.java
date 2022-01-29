@@ -11,7 +11,7 @@ public class B10828 {
 
         int N = sc.nextInt();
 
-        stack = new int[N];
+        stack = new int[N]; // 스택 직접 구현
 
         for(int i = 0; i < N; i++) {
             String str = sc.next();
