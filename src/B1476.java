@@ -14,13 +14,14 @@ public class B1476 {
             if (E == e && S == s && M == m) {
                 System.out.println(year);
                 break;
-            } else {
+            }
+            else {
                 e += 1;
                 s += 1;
                 m += 1;
                 year += 1;
 
-                if (e > 15)
+                if (e > 15) // E,S,M의 범위가 넘어가는 경우 1이 됨
                     e = 1;
                 if (s > 28)
                     s = 1;
