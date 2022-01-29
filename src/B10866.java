@@ -12,6 +12,7 @@ public class B10866 {
         int n = sc.nextInt();
         for (int i=0; i<n; i++){
             String str = sc.next();
+
             switch(str){
                 case "push_front":
                     dq.offerFirst(sc.nextInt());
@@ -48,30 +49,35 @@ public class B10866 {
         }
         System.out.println(sb);
     }
+
     public static int pop_front() {
         if (dq.isEmpty())
             return -1;
         else
             return dq.pollFirst();
     }
+
     public static int pop_back() {
         if (dq.isEmpty())
             return -1;
         else
             return dq.pollLast();
     }
+
     public static int empty() {
         if (dq.isEmpty())
             return 1;
         else
             return 0;
     }
+
     public static int front(){
         if (dq.isEmpty())
             return -1;
         else
             return dq.peekFirst();
     }
+
     public static int back(){
         if (dq.isEmpty())
             return -1;
