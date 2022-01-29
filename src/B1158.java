@@ -10,13 +10,14 @@ public class B1158 {
         int n = sc.nextInt();
         int k = sc.nextInt();
         Queue<Integer> q = new LinkedList<>();
+
         for (int i=0; i<n; i++){ // enqueue
             q.add(i+1);
         }
 
         sb.append("<");
         while(! q.isEmpty()) { // dequeue
-            for (int i = 0; i < k - 1; i++) { // k-1 번 front의 원소를 rear에 삽입
+            for (int i = 0; i < k - 1; i++) { // k-1번 front의 원소를 rear에 삽입
                 q.add(q.remove());
             }
             if(q.size() == 1){ // front의 원소를 삭제
