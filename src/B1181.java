@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class B1181 {
     // 단어 정렬
-    // 길이가 짧은 것부터
-    // 길이가 같으면 사전 순으로
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
@@ -16,7 +14,7 @@ public class B1181 {
         Arrays.sort(str, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                if (o1.length() == o2.length()) // 길이가 같다면, 사전순으로 정렬
+                if (o1.length() == o2.length()) // 길이가 같다면, 사전 순으로 정렬
                     return o1.compareTo(o2);
 
                 else
