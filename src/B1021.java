@@ -15,7 +15,7 @@ public class B1021 {
 
         int cnt = 0;
         for (int i=0; i<m; i++){
-            int p = sc.nextInt(); // 뽑아내려고 하는 수의 위치(초기)
+            int p = sc.nextInt(); // 뽑아내려고 하는 수의 위치 (초기)
             int idx = 0;
             Iterator<Integer> it = q.iterator();
             while (it.hasNext()){
@@ -25,7 +25,7 @@ public class B1021 {
                     break;
                 }
             }
-            if (idx <= q.size()-idx+1) { // 앞에서 뽑는게 최소횟수일 경우, ( if문 주의 : 뒤부터 셀 경우 한 칸 더 밀어줘야함)
+            if (idx <= q.size()-idx+1) { // 앞에서 뽑는게 최소횟수일 경우 (뒤부터 셀 경우 한 칸 더 밀어줘야함)
                 while (true) {
                     if (q.peekFirst() == p) {
                         q.pollFirst();
@@ -37,7 +37,7 @@ public class B1021 {
 
                 }
             }
-            else { // 뒤에서 뽑는게 최소횟수일 경우,
+            else { // 뒤에서 뽑는게 최소횟수일 경우
                 while (true) {
                     if (q.peekFirst() == p){
                         q.pollFirst();
