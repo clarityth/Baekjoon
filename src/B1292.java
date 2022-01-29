@@ -11,7 +11,7 @@ public class B1292 {
         for (int i = 1; i <= 1000; i++) { // start부터 end까지 반복
             for (int j = 0; j < i; j++){ // 현재 숫자만큼 반복
                 cnt++; // 몇번째 숫자인지 카운트
-                if (cnt >= a &&  cnt <= b){
+                if (cnt >= a &&  cnt <= b){ // 1 <= A <= B <= 1000
                     res += i;
                 }
 
