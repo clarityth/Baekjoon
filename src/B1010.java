@@ -10,8 +10,8 @@ public class B1010 {
             int n = sc.nextInt();
             int m = sc.nextInt();
 
-            long res = 1;
-            for (int j=m; j>n; j--){
+            long res = 1; // 자료형 크기 초과 방지
+            for (int j=m; j>n; j--){ // mCn
                 res *= j;
                 res /= m-j+1;
             }
