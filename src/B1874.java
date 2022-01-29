@@ -32,7 +32,7 @@ public class B1874 {
                 st.pop(); // 같아진 순간 pop
                 sb.append("-\n");
             }
-            else { // 입력된 숫자가 peek 값보다 작을 때, 수열 생성 불가능
+            else { // 입력된 숫자가 peek 값보다 작을 때, 수열 생성 불가능 -> NO 출력
                 sb.delete(0, sb.length());
                 sb.append("NO");
                 break;
