@@ -38,7 +38,7 @@ public class B1018 {
 
         for (int i=0; i<=N-8; i++){ // 여유 행만큼 이동
             for (int j=0; j<=M-8; j++){ // 여유 열만큼 이동
-                int b_wrong = 0;
+                int b_wrong = 0; // Buffer
                 int w_wrong = 0;
                 for (int k=0; k<8; k++) {
                     for (int l=0; l<8; l++) {
@@ -55,6 +55,5 @@ public class B1018 {
             }
         }
         System.out.println(Math.min(b_cnt, w_cnt));
-
         }
     }
