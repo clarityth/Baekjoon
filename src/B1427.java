@@ -11,11 +11,11 @@ public class B1427 {
         int[] a = new int[11];
         Arrays.fill(a,-1);
 
-        while (num > 0){
+        while (num > 0){ // 자리수 나누기
             a[index++] = num % 10;
             num /= 10;
         }
-        for (int j=0; j<a.length; j++){
+        for (int j=0; j<a.length; j++){ // 버블 정렬
             for (int k=0; k<a.length-1; k++){
                 if (a[k]<a[k+1]){
                     int temp = a[k+1];
