@@ -13,7 +13,7 @@ public class B10773 {
 
         for (int i=0; i<n; i++){
             int num = sc.nextInt();
-            if (num == 0){
+            if (num == 0){ // 가장 최근에 쓴 수 삭제
                 pop();
             } else {
                 push(num);
