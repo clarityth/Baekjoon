@@ -28,12 +28,12 @@ public class B1920 {
         }
         System.out.println(sb);
     }
-    public static int binarySearch(int[] arr, int key){
-        int low = 0;
-        int high = arr.length - 1;
+    public static int binarySearch(int[] arr, int key){ // 이진 탐색
+        int low = 0; // 처음 index
+        int high = arr.length - 1; // 마지막 index
 
         while (low <= high){
-            int mid = (low+high)/2;
+            int mid = (low+high)/2; // mid 계산
 
             if (key < arr[mid]){
                 high = mid-1;
