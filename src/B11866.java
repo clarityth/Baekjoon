@@ -17,11 +17,11 @@ public class B11866 {
         sb.append("<");
         for (int i=0; i<n; i++) {
             for (int j = 0; j < k - 1; j++) {
-                q.offer(q.poll());
+                q.offer(q.poll()); // k-1번 큐의 맨앞 원소를 뽑아서 뒤에 붙힘
             }
-            sb.append(q.poll());
+            sb.append(q.poll()); // k번째 원소 제거
 
-            if (q.size() == 0) {
+            if (q.size() == 0) { // 큐가 비워진 경우, ">" 출력
                 sb.append(">");
             }
             else {
