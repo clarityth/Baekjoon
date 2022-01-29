@@ -8,9 +8,9 @@ public class B1312 {
         int b = sc.nextInt();
         int n = sc.nextInt();
 
-        int res = a%b;
+        int res = a % b; // 일의 자리
         for (int i=0; i<n-1; i++){
-            res *= 10;
+            res *= 10; // 0을 붙여줌
             res %= b;
         }
         res *= 10;
