@@ -9,11 +9,11 @@ public class B1251 {
         for(int i=1; i<str.length()-1; i++) {
             String revWord;
             String first, mid, last;
+
             for (int j=i+1; j<str.length(); j++) {
                 first = str.substring(0, i); // 0부터 i-1까지
                 mid = str.substring(i, j); // i부터 j-1까지
                 last = str.substring(j); // j부터 끝까지
-//                sb.append(first + " " + mid + " " + last + " \n");
                 revWord = reverse(first) + reverse(mid) + reverse(last);
                 revWords.add(revWord);
             }
