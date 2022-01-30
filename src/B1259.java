@@ -5,7 +5,6 @@ public class B1259 {
     public static void main (String[] args){
         Scanner sc = new Scanner(System.in);
         StringBuilder sb = new StringBuilder();
-
         int num = sc.nextInt();
 
         while (num != 0) {
@@ -23,8 +22,6 @@ public class B1259 {
                 sb.append("no" + "\n");
             num = sc.nextInt();
         }
-
         System.out.println(sb);
-
     }
 }
