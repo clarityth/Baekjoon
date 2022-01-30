@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import static java.lang.String.valueOf;
-
 public class B1855 {
     // 암호
     // [0,0] [1,0] [2,0] line 0
