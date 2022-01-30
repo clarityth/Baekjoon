@@ -20,7 +20,7 @@ public class B10816 {
         System.out.println(sb);
     }
 
-    public static int lowerBound(int[] arr, int key){ // 찾는 값 이상의 값의 index를 반환
+    public static int lowerBound(int[] arr, int key){ // 찾는 값 이상의 값의 idx 반환
         int low = 0;
         int high = arr.length;
 
@@ -36,7 +36,7 @@ public class B10816 {
         return low;
     }
 
-    public static int upperBound(int[] arr, int key){ // 찾는 값을 초과하는 값의 index를 반환
+    public static int upperBound(int[] arr, int key){ // 찾는 값을 초과하는 값의 idx 반환
         int low = 0;
         int high = arr.length;
 
