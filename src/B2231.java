@@ -21,6 +21,6 @@ public class B2231 {
                 return;
             }
         }
-        System.out.println(0);
+        System.out.println(0); // 생성자가 없는 경우
     }
 }
