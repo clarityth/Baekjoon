@@ -22,7 +22,7 @@ public class B10250 {
                 height = n % h;
                 width = (n/h) + 1;
             }
-            if (h < 10) { // 호수가 YXX의 경우
+            if (height < 10) { // 호수가 YXX의 경우
                 if (width < 10) {
                     sb.append(height + "0" + width);
                 } else {
