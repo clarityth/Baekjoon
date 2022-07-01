@@ -25,6 +25,7 @@ int main(void){
       grade_score -= 0.3;
     gpa += grade_score * credit;
   }
+  // 부동소수점 오차
   printf("%.2lf", gpa/total_credit + 0.000000001);
   return 0;
 }
