@@ -34,8 +34,8 @@ public class B1260 {
         }
       }
     }
-    
   }
+  
   public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
     N = sc.nextInt();
@@ -49,7 +49,6 @@ public class B1260 {
       int secondVertex = sc.nextInt();
       branch[firstVertex][secondVertex] = branch[secondVertex][firstVertex] = 1;
   }
-    
     dfs(V);
     System.out.println();
     // visit 배열 초기화
