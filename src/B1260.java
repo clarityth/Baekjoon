@@ -48,7 +48,7 @@ public class B1260 {
       int firstVertex = sc.nextInt();
       int secondVertex = sc.nextInt();
       branch[firstVertex][secondVertex] = branch[secondVertex][firstVertex] = 1;
-  }
+    }
     dfs(V);
     System.out.println();
     // visit 배열 초기화
