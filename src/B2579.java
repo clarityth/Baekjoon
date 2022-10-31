@@ -19,8 +19,8 @@ public class Main {
     }
     
     dp[0] = stairValue[0];
-    dp[1] = max(stairValue[0] + stairValue[1], stairValue[1]);
-    dp[2] = max(stairValue[0] + stairValue[2], stairValue[1]+stairValue[2]);
+    dp[1] = max(stairValue[0]+stairValue[1], stairValue[1]);
+    dp[2] = max(stairValue[0]+stairValue[2], stairValue[1]+stairValue[2]);
     
     for (int i = 3; i < numOfStair; i++) {
       dp[i] = max(dp[i-3]+stairValue[i-1]+stairValue[i], dp[i-2]+stairValue[i]); 
