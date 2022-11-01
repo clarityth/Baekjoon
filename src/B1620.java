@@ -22,8 +22,8 @@ public class B1620{
     
     for(int i=0; i<M; i++){
       String input = br.readLine();
-      char c[] = input.toCharArray();
-      if (c[0] >= 48 && c[0]<= 57){
+      char c = input.charAt(0);
+      if (c >= 48 && c<= 57){
         int pokeNum = Integer.parseInt(input);
         String pokeName = pokedex.get(pokeNum);
         sb.append(pokeName+"\n");
