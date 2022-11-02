@@ -21,7 +21,7 @@ public class B11724 {
     StringTokenizer st = new StringTokenizer(br.readLine());
     N = Integer.parseInt(st.nextToken());
     M = Integer.parseInt(st.nextToken());
-    int conCompo = 0;
+    int conectedComponent = 0;
     graph = new int[N+1][N+1];
     visited = new boolean[N+1];
     
@@ -36,10 +36,10 @@ public class B11724 {
     for(int i=1; i<=N; i++){
       if(!visited[i]){
         dfs(i);
-        conCompo++;
+        conectedComponent++;
       }
     }
-    System.out.println(conCompo);
+    System.out.println(conectedComponent);
   }
 }
 
