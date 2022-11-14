@@ -31,4 +31,3 @@ public class B18870 {
     System.out.print(sb);
   }
 }
-
