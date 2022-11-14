@@ -12,12 +12,14 @@ public class B18870 {
     int[] coordinate = new int[N];
     int[] sortedCoordinate = new int[N];
     StringTokenizer st = new StringTokenizer(br.readLine());
+    
     for(int i=0; i<N; i++){
       coordinate[i] = sortedCoordinate[i] = Integer.parseInt(st.nextToken());
     }
     Arrays.sort(sortedCoordinate);
     HashMap<Integer,Integer> rankMap = new HashMap<>();
     int rank = 0;
+    
     for(int i=0; i<N; i++){
       if(!rankMap.containsKey(sortedCoordinate[i])){
         rankMap.put(sortedCoordinate[i], rank);
@@ -25,6 +27,7 @@ public class B18870 {
       }
     }
     StringBuilder sb = new StringBuilder();
+    
     for(int i=0; i<N; i++){
       sb.append(rankMap.get(coordinate[i])+" ");
     }
