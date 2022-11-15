@@ -24,8 +24,8 @@ public class Main {
       white++;
       return;
     }
-    cut(x, y, size / 2); // 1사분면 탐색
-    cut(x + size / 2, y, size / 2); // 2사분면 탐색
+    cut(x, y, size / 2); // 2사분면 탐색
+    cut(x + size / 2, y, size / 2); // 1사분면 탐색
     cut(x, y + size / 2, size / 2); // 3사분면 탐색
     cut(x + size / 2, y + size / 2, size / 2); // 4사분면 탐색
   }
