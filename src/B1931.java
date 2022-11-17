@@ -24,6 +24,7 @@ public class Main {
         // 종료 시간이 같을 경우, 시작 시간 기준 오름차순 정렬
         if (o1[1] == o2[1])
           return o1[0] - o2[0];
+        // 종료 시간 기준 오름차순 정렬
         else
           return o1[1] - o2[1];
       }
