@@ -31,8 +31,8 @@ public class B1697 {
         }
         if (!visit[nextPos]) {
           route[nextPos] = route[currentPos] + 1;
-          q.offer(nextPos);
           visit[nextPos] = true;
+          q.offer(nextPos);
         }
       }
     }
