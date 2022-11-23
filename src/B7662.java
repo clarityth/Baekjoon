@@ -5,25 +5,22 @@ import java.util.StringTokenizer;
 import java.util.PriorityQueue;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
 
-public class Main {
-  public static HashMap<Integer, Integer> map = new HashMap<>();
-
-  static int delete(PriorityQueue<Integer> q) {
-    int res = 0;
+public class B7662 {
+  static int delete(HashMap<Integer, Integer> map, PriorityQueue<Integer> q) {
+    int value = 0;
     while (true) {
-      res = q.poll();
-      int cnt = map.getOrDefault(res, 0);
-      if (cnt == 0)
+      value = q.poll();
+      int numOfVal = map.getOrDefault(value, 0);
+      if (numOfVal == 0)
         continue;
-      if (cnt == 1)
-        map.remove(res);
+      if (numOfVal == 1)
+        map.remove(value);
       else
-        map.put(res, cnt - 1);
+        map.replace(value, numOfVal - 1);
       break;
     }
-    return res;
+    return value;
   }
 
   public static void main(String[] args) throws IOException {
@@ -33,9 +30,10 @@ public class Main {
 
     for (int i = 0; i < T; i++) {
       int k = Integer.parseInt(br.readLine());
+      // 최소큐, 최대큐 생성
       PriorityQueue<Integer> minPq = new PriorityQueue<>();
       PriorityQueue<Integer> maxPq = new PriorityQueue<>(Collections.reverseOrder());
-      map = new HashMap<>();
+      HashMap<Integer, Integer> map = new HashMap<>();
       // hashmap에 <값, 해당 값의 갯수> 형태로 저장
       for (int j = 0; j < k; j++) {
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -52,34 +50,26 @@ public class Main {
           if (!map.isEmpty()) {
             if (opCode == 1) {
               // 최댓값 삭제
-              // key = maxPq.poll();
-              delete(maxPq);
+              delete(map, maxPq);
             } else if (opCode == -1) {
               // 최솟값 삭제
-              // key = minPq.poll();
-              delete(minPq);
+              delete(map, minPq);
             }
-            // // 삭제 연산에서 값이 둘 이상인 경우, 하나만 삭제됨
-            // int numOfVal = map.getOrDefault(key, 0);
-            // if (numOfVal > 1)
-            // map.replace(key, numOfVal - 1);
-            // else if (numOfVal == 1)
-            // map.remove(key);
-            // else
-            // continue;
           }
         }
       }
       if (map.isEmpty())
         sb.append("EMPTY\n");
       else {
-        // 큐에 값이 하나 밖에 없는 경우, 최댓값과 최솟값이 같아야함
-        int res = delete(maxPq);
-        sb.append(res + " ");
+        int max = delete(map, maxPq);
+        sb.append(max + " ");
+        // 큐에 원소가 하나만 있을 경우 고려(최댓값과 최솟값이 같음)
         if (!map.isEmpty()) {
-          res = delete(minPq);
-        }
-        sb.append(res + "\n");
+          int min = delete(map, minPq);
+          sb.append(min + "\n");
+        } 
+        else
+          sb.append(max + "\n");
       }
     }
     System.out.println(sb);
