@@ -14,8 +14,7 @@ public class B2667 {
   public static boolean[][] visit;
   public static int[] dx = { 0, 0, -1, 1 };
   public static int[] dy = { 1, -1, 0, 0 };
-  public static StringBuilder sb = new StringBuilder();
-
+  
   public static void numbering(int x, int y) {
     Queue<int[]> q = new LinkedList<int[]>();
     q.offer(new int[] { x, y });
@@ -56,7 +55,7 @@ public class B2667 {
     complex = new int[N + 1][N + 1];
     visit = new boolean[N + 1][N + 1];
     complexCnt = new ArrayList<>();
-    sb = new StringBuilder();
+    StringBuilder sb = new StringBuilder();
     for (int i = 0; i < N; i++) {
       String str = br.readLine();
       for (int j = 0; j < N; j++) {
