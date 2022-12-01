@@ -7,7 +7,7 @@ import java.util.Queue;
 import java.util.LinkedList;
 import java.util.ArrayList;
 
-public class Main {
+public class B2667 {
   public static int N, idx = 0;
   public static int[][] complex;
   public static ArrayList<Integer> complexCnt;
