@@ -47,7 +47,8 @@ public class B1992 {
     for (int i = 0; i < N; i++) {
       String str = br.readLine();
       for (int j = 0; j < N; j++) {
-        video[i][j] = Character.getNumericValue(str.charAt(j));      if (video[i][j] == 0)
+        video[i][j] = Character.getNumericValue(str.charAt(j));      
+        if (video[i][j] == 0)
           allOneFlag = 0;
         else
           allZeroFlag = 0;
@@ -55,19 +56,17 @@ public class B1992 {
     }
     if (allOneFlag == 1 && allZeroFlag == 0) {
       System.out.println("1");
-      System.exit(0);
     } else if (allZeroFlag == 1 && allOneFlag == 0) {
       System.out.println("0");
-      System.exit(0);
+    } else {
+      sb = new StringBuilder();
+      sb.append("(");
+      quadTree(0, 0, N / 2);
+      quadTree(N/2, 0, N/2);
+      quadTree(0, N/2, N/2);
+      quadTree(N/2, N/2, N/2);
+      sb.append(")");
+      System.out.println(sb);
     }
-      
-    sb = new StringBuilder();
-    sb.append("(");
-    quadTree(0, 0, N / 2);
-    quadTree(N/2, 0, N/2);
-    quadTree(0, N/2, N/2);
-    quadTree(N/2, N/2, N/2);
-    sb.append(")");
-    System.out.println(sb);
   }
 }
