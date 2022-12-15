@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 import java.lang.Math;
 
-public class Main {
+public class B1107 {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     boolean[] brokenBtn = new boolean[10];
