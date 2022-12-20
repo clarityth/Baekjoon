@@ -14,7 +14,7 @@ public class Main {
       StringTokenizer st = new StringTokenizer(br.readLine());
       int A = Integer.parseInt(st.nextToken());
       int B = Integer.parseInt(st.nextToken());
-      // BST이므로, h = log2(n)
+      // BST이므로, h = log2(n) = log10(n) / log10(2)
       int height_A = (int) (Math.log10(A) / Math.log10(2));
       int height_B = (int) (Math.log10(B) / Math.log10(2));
       while (A != B){
