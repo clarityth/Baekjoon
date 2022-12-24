@@ -12,6 +12,8 @@ public class B13701 {
     StringBuilder sb = new StringBuilder();
     int idx, shift, n;
     int arr[] = new int[(1 << 20) + 2];
+    // 33554432(2^25)/32(2^5) = 1048576(2^20)
+    // arr[0] = 0~31 검사 arr[1] 32 ~ 63 ... 검사
     while (st.hasMoreTokens()) {
       n = Integer.parseInt(st.nextToken());
       idx = n / 32;
