@@ -64,7 +64,6 @@ public class B7569 {
     ripeDay = new int[H][N][M];
     visit = new boolean[H][N][M];
     boolean isAllRiped = true;
-    boolean isCantRiped = false;
     for(int i=0; i<H; ++i){
       for(int j=0; j<N; ++j){
         st = new StringTokenizer(br.readLine());
