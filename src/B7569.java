@@ -10,7 +10,7 @@ import java.util.LinkedList;
 public class B7569 {
   public static int box[][][], ripeDay[][][];
   public static boolean visit[][][];
-  public static int M, N, H, day = 0;
+  public static int M, N, H;
   public static int[] dx = {0, 0, -1, 1, 0, 0};
   public static int[] dy = {0, 0, 0, 0, 1, -1};
   public static int[] dz = {1, -1, 0, 0, 0, 0};
@@ -37,7 +37,7 @@ public class B7569 {
         if (nextX < 0 || nextY < 0 || nextZ < 0 || nextX >= M || nextY >= N || nextZ >= H)
           continue;
         if (!visit[nextZ][nextY][nextX] && box[nextZ][nextY][nextX] == 0){
-          // 처음 방문하는 경우, 익지않은 토마토의 좌표를 큐에 삽입, 방문처리
+          // 처음 방문하는 경우, 익지 않은 토마토의 좌표를 큐에 삽입, 방문처리
           q.offer(new int[] {nextX, nextY, nextZ});
           visit[nextZ][nextY][nextX] = true;
           ripeDay[nextZ][nextY][nextX] += ripeDay[curZ][curY][curX] + 1;
