@@ -12,10 +12,10 @@ public class B17499 {
     StringTokenizer st = new StringTokenizer(br.readLine());
     int N = Integer.parseInt(st.nextToken());
     int Q = Integer.parseInt(st.nextToken());
-    int[] progression = new int[N + 1];
+    int[] sequence = new int[N + 1];
     st = new StringTokenizer(br.readLine());
     for (int i = 0; i < N; i++) {
-      progression[i] = Integer.parseInt(st.nextToken());
+      sequence[i] = Integer.parseInt(st.nextToken());
     }
     int offset = 0;
     for (int i = 0; i < Q; i++) {
@@ -25,7 +25,7 @@ public class B17499 {
       if (st.hasMoreTokens()) {
         // 더하기 연산
         int b = Integer.parseInt(st.nextToken());
-        progression[(offset + a - 1) % N] += b;
+        sequence[(offset + a - 1) % N] += b;
       } else {
         // 시프트 연산
         if (opCode == 2) {
@@ -38,7 +38,7 @@ public class B17499 {
       }
     }
     for (int j = offset; j < offset + N; j++) {
-      bw.write(String.valueOf(progression[j % N]));
+      bw.write(String.valueOf(sequence[j % N]));
       bw.write(" ");
     }
     bw.flush();
