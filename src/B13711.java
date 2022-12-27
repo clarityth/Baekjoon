@@ -28,7 +28,7 @@ public class B13711 {
     }
     Vector<Integer> v = new Vector<Integer>();
     // 벡터 내의 마지막 원소보다 현재 들어올 값이 큰 경우, 벡터의 맨 뒤에 추가
-    // 작을 경우, 해당 자리의 원소를 교체
+    // 작을 경우, 해당 숫자가 들어가야할 자리에 있는 원소를 교체
     for(int n : sorted){
       if (v.isEmpty())
         v.add(n);
