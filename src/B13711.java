@@ -23,7 +23,7 @@ public class B13711 {
     }
     st = new StringTokenizer(br.readLine());
     for(int i=0; i<N; ++i){
-      // 두번째 수열의 원소가 첫번째 수열에서 입력된 순서를 순서대로 저장
+      // 두번째 수열의 원소가 첫번째 수열에서 입력된 순서대로 저장
       sorted[i] = hm.get(Integer.parseInt(st.nextToken()));
     }
     Vector<Integer> v = new Vector<Integer>();
