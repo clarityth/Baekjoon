@@ -25,7 +25,8 @@ public class Main {
       else {
         // 해당 원소가 삽입될 자리를 찾아 기존 원소를 교체
         int pos = Collections.binarySearch(lis, e);
-        // Collections.binarySearch() -> 해당 원소를 발견했다면, 그 위치를 리턴 / 발견하지 못했다면, -InsertionPoint - 1을 리턴 (*Insertion Point : 해당 원소가 있었다면 삽입되었을 위치)
+        /* Collections.binarySearch() -> 해당 원소를 발견했다면, 그 위치를 리턴  
+                                         발견하지 못했다면, -InsertionPoint - 1을 리턴 (*Insertion Point : 해당 원소가 있었다면 삽입되었을 위치) */
         if (pos < 0) {
           pos = (pos * -1) - 1;
         }
