@@ -4,9 +4,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 import java.util.StringTokenizer;
-import java.util.Vector;
-import java.util.Collections;
-import java.util.Stack;
 
 public class B17216 {
   public static void main(String[] args) throws IOException {
@@ -22,16 +19,16 @@ public class B17216 {
       dp[i] = sequence[i];
     }
 
-    int idsSum = 0;
+    int maxSum = 0;
     for (int i = 1; i < N; ++i) {
       for (int j = 0; j < i; ++j){
         if (sequence[i] < sequence[j]){
           dp[i] = Math.max(dp[i], dp[j] + sequence[i]);
         }
       }
-      idsSum = Math.max(idsSum, dp[i]);
+      maxSum = Math.max(maxSum, dp[i]);
     }
-    bw.write(String.valueOf(idsSum));
+    bw.write(String.valueOf(maxSum));
     bw.flush();
     bw.close();
     br.close();
