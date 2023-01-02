@@ -13,8 +13,8 @@ public class B17216 {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     int N = Integer.parseInt(br.readLine());
-    int[] sequence = new int[N+1];
-    int[] dp = new int[N+1];
+    int[] sequence = new int[N];
+    int[] dp = new int[N];
     StringTokenizer st = new StringTokenizer(br.readLine());
     
     for (int i = 0; i < N; ++i) {
@@ -24,7 +24,7 @@ public class B17216 {
 
     int idsSum = 0;
     for (int i = 1; i < N; ++i) {
-      for (int j = 0; j<i; ++j){
+      for (int j = 0; j < i; ++j){
         if (sequence[i] < sequence[j]){
           dp[i] = Math.max(dp[i], dp[j] + sequence[i]);
         }
