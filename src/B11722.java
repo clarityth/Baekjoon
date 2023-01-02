@@ -29,7 +29,7 @@ public class B11722 {
         v.add(num);
       }
       else {
-        idx = Collections.binarySearch(v, num, Collections.reverseOrder());
+        int idx = Collections.binarySearch(v, num, Collections.reverseOrder());
         if (idx < 0){
           int idx = (-1 * idx) - 1;
         }
