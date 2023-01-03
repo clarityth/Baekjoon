@@ -10,7 +10,7 @@ public class B5430 {
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     int T = Integer.parseInt(br.readLine());
     StringBuffer sb = new StringBuffer();
-    for(int i=0; i<T; ++i){
+    for(int i = 0; i < T; ++i){
       String function = br.readLine();
       int n = Integer.parseInt(br.readLine());
       String arrayStr = br.readLine();
@@ -19,7 +19,7 @@ public class B5430 {
       String[] element = arrayStr.split(",");
       boolean isReversed = false, isBreaked = false;
       int firstIdx = 0, lastIdx = n-1;
-      for(int j=0; j<function.length(); ++j){
+      for(int j = 0; j < function.length(); ++j){
         if (function.charAt(j) == 'R'){
           if (isReversed){
             isReversed = false;
