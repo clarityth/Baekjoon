@@ -9,7 +9,7 @@ public class B26595 {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    int N = Integer.parseInt(br.readLine());
+    long N = Integer.parseInt(br.readLine());
     StringTokenizer st = new StringTokenizer(br.readLine());
     long A = Integer.parseInt(st.nextToken());
     long PA = Integer.parseInt(st.nextToken());
