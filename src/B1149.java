@@ -41,6 +41,16 @@ public class B1149 {
       coloringCosts[i][G] = Integer.parseInt(st.nextToken());
       coloringCosts[i][B] = Integer.parseInt(st.nextToken());
     }
+
+    // 반복문
+    // for(int i=1; i<N; ++i){
+    //   coloringCosts[i][R] += Math.min(coloringCosts[i-1][G], coloringCosts[i-1][B]);
+    //   coloringCosts[i][G] += Math.min(coloringCosts[i-1][R], coloringCosts[i-1][B]);
+    //   coloringCosts[i][B] += Math.min(coloringCosts[i-1][R], coloringCosts[i-1][G]);
+    // }
+    // bw.write(String.valueOf(Math.min(coloringCosts[N-1][R], Math.min(coloringCosts[N-1][G], coloringCosts[N-1][B]))));
+
+    // 재귀
     bw.write(String.valueOf(Math.min(coloring(N-1, R), Math.min(coloring(N-1, G), coloring(N-1, B)))));
     bw.flush();
     bw.close();
