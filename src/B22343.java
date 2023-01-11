@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 
-public class Main {
+public class B22343 {
   public static int maxSize;
   public static void getBinaryValue(String s, int[] v) {
     int idx = 0;
