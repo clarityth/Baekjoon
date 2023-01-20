@@ -28,11 +28,11 @@ public class B20920 {
     Collections.sort(vocaList, new Comparator<Map.Entry<String, Integer>>() {
       @Override
     	public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-        // 빈도 순으로 정렬
         int v1 = o1.getValue();
         int v2 = o2.getValue();
         if (v1 != v2){
-          return -(v1 - v2);
+          // 빈도 순으로 정렬
+          return v2-v1;
         }
         else {
           String k1 = o1.getKey();
@@ -41,7 +41,7 @@ public class B20920 {
           int l2 = k2.length();
           if (l1 != l2) {
           // 길이가 긴 순으로 정렬
-    			 return -(l1 - l2);
+    			 return l2-l1;
     		  }
       		else {
             for (int i=0; i<k1.length(); ++i){
