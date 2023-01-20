@@ -9,7 +9,7 @@ public class B2138 {
   public static int N;
   public static char[] targetBulbStatus;
 
-  public static void NOT(char[] bulbStatus, int i){
+  public static void bitReverse(char[] bulbStatus, int i){
     if (bulbStatus[i] == '0')
       bulbStatus[i] = '1';
     else
@@ -21,10 +21,10 @@ public class B2138 {
     for(int i=1; i<N; ++i){
       if (bulbStatus[i-1] != targetBulbStatus[i-1]){
         ++cnt;
-        NOT(bulbStatus, i-1);
-        NOT(bulbStatus, i);
+        bitReverse(bulbStatus, i-1);
+        bitReverse(bulbStatus, i);
         if (i != N-1)
-          NOT(bulbStatus, i+1);
+          bitReverse(bulbStatus, i+1);
       }
     } 
     if (bulbStatus[N-1] != targetBulbStatus[N-1]) 
@@ -42,8 +42,8 @@ public class B2138 {
     // 켜지 않고 시작
     targetBulbStatus = br.readLine().toCharArray();
     if (N >= 3) {
-      NOT(bulbStatus1, 0);
-      NOT(bulbStatus1, 1);
+      bitReverse(bulbStatus1, 0);
+      bitReverse(bulbStatus1, 1);
     }
     
     int cnt1 = getChangeCnt(bulbStatus1, 1);
