@@ -66,7 +66,7 @@ public class B2583 {
       int rightTopY = Integer.parseInt(st.nextToken());
       for (int j = leftBottomY; j < rightTopY; ++j) {
         for (int k = leftBottomX; k < rightTopX; ++k) {
-          // 좌표계가 1사분면이므로 (좌측 하단이 0,0), 배열의 형태에 맞게 변환하여 방문 처리
+          // 좌표계가 1사분면이므로 (좌측 하단이 0,0), 배열의 형태에 맞게 변환하여 직사각형 영역 방문 처리
           visit[M - 1 - j][k] = true;
         }
       }
