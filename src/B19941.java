@@ -14,8 +14,7 @@ public class B19941 {
     for (int i = 0; i < N; ++i) {
       if (str.charAt(i) == 'P') {
         // 사람(P)을 발견했다면 사람의 인덱스 i 기준 i-K ~ i+K까지 순회하며 햄버거(H)를 탐색
-        int chkIdx = i - K;
-        while (chkIdx <= i + K) {
+        for (int chkIdx = i - K; chkIdx <= i + K; ++chkIdx) {
           if (chkIdx >= 0 && chkIdx < N) {
             if (str.charAt(chkIdx) == 'H' && !visit[chkIdx]) {
               maxPersonCnt++;
@@ -23,7 +22,6 @@ public class B19941 {
               break;
             }
           }
-          ++chkIdx;
         }
       }
     }
