@@ -12,11 +12,12 @@ class garden {
   }
 }
 
-public class B14620 {
+public class Main {
   static int checkAndGetPrice(Point a, Point b, Point c) {
     visit = new boolean[N][N];
     int totalPrice = prices[a.y][a.x] + prices[b.y][b.x] + prices[c.y][c.x];
     // 꽃을 심는 장소 체크
+    visit[a.y][a.x] = true;
     if (!visit[b.y][b.x])
       visit[b.y][b.x] = true;
     else
