@@ -4,7 +4,7 @@ import java.util.*;
 public class B15651 {
   static int N, M;
   static StringBuilder sb;
-  static void permutation(int[] num, int[] output, boolean visited[], int depth, int idx, int r){
+  static void permutation(int[] num, int[] output, int depth, int idx, int r){
     if (depth == r){
       for (int i = 0; i < r; ++i){
         sb.append(output[i] + " ");
@@ -15,7 +15,7 @@ public class B15651 {
     
     for (int i = 0; i < N; ++i) {
       output[depth] = num[i];
-      permutation(num, output, visited, depth + 1, i, r);
+      permutation(num, output, depth + 1, i, r);
     }
   }
   public static void main(String[] args) throws IOException {
@@ -30,7 +30,7 @@ public class B15651 {
     for (int i = 0; i < N; ++i){
       num[i] = i + 1;
     }
-    permutation(num, output, visited, 0, 0, M);
+    permutation(num, output, 0, 0, M);
     bw.write(sb.toString());
     bw.flush();
     bw.close();
