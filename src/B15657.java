@@ -7,7 +7,7 @@ public class B15657 {
   static void sequence(int[] input, int[] output, int depth) {
     if (depth == M) {
       for (int i = 0; i < M; ++i) {
-          sb.append(output[i] + " ");
+        sb.append(output[i] + " ");
       }
       sb.append("\n");
       return;
