@@ -5,7 +5,7 @@ import java.io.OutputStreamWriter;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B1149 {
   public static final int R = 0, G = 1, B = 2;
   public static int[][] input, DP;
 
