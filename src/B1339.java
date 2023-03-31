@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class B1339단어 수학 {
+public class B1339 {
 
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
