@@ -25,7 +25,6 @@ public class B1918 {
         }
         op.push(c);
       }
-  
       else if (c == '*' || c == '/') {
         while (!op.isEmpty()) {
           char top = op.peek();
