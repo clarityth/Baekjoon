@@ -22,6 +22,7 @@ public class B1865 {
       // 모든 간선을 순회
       for (int j = 1; j <= n; ++j) {
         for (Edge edge : graph[j]) {
+          // !: dist[j] != INF 조건을 넣으면 음수 간선을 발견하지 못함
           if (dist[edge.e] > dist[j] + edge.t) {
             dist[edge.e] = dist[j] + edge.t;
             isUpdated = true;
@@ -49,12 +50,11 @@ public class B1865 {
     while (TC-- > 0) {
       StringTokenizer st = new StringTokenizer(br.readLine());
       int N = Integer.parseInt(st.nextToken()); // 지점의 수 
+      int M = Integer.parseInt(st.nextToken()); // 도로의 개수
+      int W = Integer.parseInt(st.nextToken()); // 웜홀의 개수
       graph = new ArrayList[N + 1];
       for (int i = 1; i <= N; ++i) 
         graph[i] = new ArrayList<>();
-      
-      int M = Integer.parseInt(st.nextToken()); // 도로의 개수
-      int W = Integer.parseInt(st.nextToken()); // 웜홀의 개수
       for (int i = 0; i < M; ++i) {
         st = new StringTokenizer(br.readLine());
         int S = Integer.parseInt(st.nextToken()); // 시작 지점
