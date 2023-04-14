@@ -1,7 +1,7 @@
+// 숫자 카드 2
 import java.util.*;
 
 public class B10816 {
-    // 숫자 카드 2
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         StringBuilder sb = new StringBuilder();
