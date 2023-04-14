@@ -1,3 +1,4 @@
+// 연산자 끼워넣기
 #include <stdio.h>
 int operands[11], operators[4];
 int n, min = 1000000001, max = -1000000001;
