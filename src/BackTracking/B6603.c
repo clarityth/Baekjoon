@@ -1,3 +1,4 @@
+// 로또
 #include <stdio.h>
 int arr[50], res[50], n;
 void lotto(int start, int depth){
