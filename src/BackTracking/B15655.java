@@ -1,3 +1,4 @@
+// N과 M (6) 
 import java.io.*;
 import java.util.*;
 
