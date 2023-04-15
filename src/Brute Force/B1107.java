@@ -1,4 +1,5 @@
-import java.io.BufferedReader;
+// 리모컨
+mport java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
