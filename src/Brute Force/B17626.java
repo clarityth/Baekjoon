@@ -1,3 +1,4 @@
+// Four Squares
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -24,9 +25,6 @@ public class B17626 {
         }
       }
     }
-    // for (int i = 0; i < 4; i++) {
-    // System.out.print(square[i] + " ");
-    // }
     System.out.println(cnt);
   }
 }
