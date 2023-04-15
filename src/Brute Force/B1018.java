@@ -1,7 +1,7 @@
+// 체스판 다시 칠하기
 import java.util.Scanner;
 
 public class B1018 {
-    // 체스판 다시 칠하기
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt(); // 행의 갯수
