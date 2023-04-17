@@ -1,3 +1,4 @@
+// 나는야 포켓몬 마스터 이다솜
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
