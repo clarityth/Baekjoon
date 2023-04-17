@@ -1,9 +1,9 @@
+// 요세푸스 문제
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
 public class B1158 {
-    // 요세푸스 문제
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         StringBuilder sb = new StringBuilder();
