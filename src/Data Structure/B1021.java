@@ -1,7 +1,7 @@
+// 회전하는 큐
 import java.util.*;
 
 public class B1021 {
-    // 회전하는 큐
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         Deque<Integer> q = new LinkedList<>();
