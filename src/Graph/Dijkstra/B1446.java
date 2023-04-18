@@ -1,3 +1,4 @@
+// 지름길
 import java.io.*;
 import java.util.*;
 
@@ -26,7 +27,6 @@ public class B1446 {
 
     graph = new ArrayList[10001];
     distance = new int[10001];
-    // dp 배열
 
     // initialize
     for(int i = 0; i < graph.length; ++i){
