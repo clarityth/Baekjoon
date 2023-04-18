@@ -1,3 +1,4 @@
+// 최소비용 구하기
 import java.io.*;
 import java.util.*;
 
@@ -17,7 +18,7 @@ public class Main {
   static int dist[];
   static boolean visit[];
 
-  static void djikstra(int start){
+  static void dijkstra(int start){
     PriorityQueue<Node> pq = new PriorityQueue<Node>((o1, o2) -> o1.cost - o2.cost);
     pq.offer(new Node(start, 0));
     dist[start] = 0;
@@ -62,7 +63,7 @@ public class Main {
     st = new StringTokenizer(br.readLine());
     int departures = Integer.parseInt(st.nextToken());
     int arrivals = Integer.parseInt(st.nextToken());
-    djikstra(departures);
+    dijkstra(departures);
     bw.write(String.valueOf(dist[arrivals]));
     bw.flush();
     bw.close();
