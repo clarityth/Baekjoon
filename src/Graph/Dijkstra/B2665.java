@@ -1,3 +1,4 @@
+// 미로만들기
 import java.io.*;
 import java.util.*;
 import java.awt.Point;
@@ -13,7 +14,7 @@ public class B2665 {
       this.cnt = cnt;
     }
   }
-  static void djikstra(int startX, int startY) {
+  static void dijkstra(int startX, int startY) {
     // 최소 힙 우선순위 큐
     PriorityQueue<pos> q = new PriorityQueue<pos>((o1, o2) -> o1.cnt - o2.cnt);
     // 시작 지점이 검은 방인 경우
@@ -71,7 +72,7 @@ public class B2665 {
       String str = br.readLine();
       board[i] = str.toCharArray();
     }
-    djikstra(0, 0);
+    dijkstra(0, 0);
     bw.flush();
     bw.write(String.valueOf(cnts[N-1][N-1]));
     bw.close();
