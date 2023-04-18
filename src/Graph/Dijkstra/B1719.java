@@ -1,3 +1,4 @@
+// 지름길
 import java.io.*;
 import java.util.*;
 
@@ -10,7 +11,7 @@ public class B1719 {
       this.cost = cost;
     }
   }
-  static void djikstra(int start) {
+  static void dijkstra(int start) {
     Arrays.fill(dist[start], INF);
     PriorityQueue<Edge> pq = new PriorityQueue<Edge>((o1, o2) -> o1.cost - o2.cost);
     dist[start][start] = 0;
@@ -60,7 +61,7 @@ public class B1719 {
     }
     StringBuilder sb = new StringBuilder();
     for (int i = 1; i <= n; ++i) {
-      djikstra(i);
+      dijkstra(i);
     }
     
     for (int i = 1; i <= n; ++i) {
