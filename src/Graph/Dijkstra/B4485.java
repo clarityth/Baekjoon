@@ -1,3 +1,4 @@
+// 녹색 옷 입은 애가 젤다지?
 import java.io.*;
 import java.util.*;
 import java.awt.Point;
@@ -13,7 +14,7 @@ public class B4485 {
       this.rupee = rupee;
     }
   }
-  static void djikstra(int startX, int startY) {
+  static void dijkstra(int startX, int startY) {
     PriorityQueue<pos> q = new PriorityQueue<pos>((o1, o2) -> o1.rupee - o2.rupee);
     blackRupee[startY][startX] = cave[startY][startX];
     q.offer(new pos(startX, startY, cave[startY][startX]));
@@ -61,7 +62,7 @@ public class B4485 {
           blackRupee[i][j] = INF;
         }
       }
-      djikstra(0, 0);
+      dijkstra(0, 0);
       sb.append("Problem " + idx + ": " + blackRupee[N-1][N-1] + "\n");
     }
     bw.flush();
