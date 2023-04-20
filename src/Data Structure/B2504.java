@@ -1,3 +1,4 @@
+// 괄호의 값
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -13,7 +14,7 @@ public class B2504 {
     Stack<Character> bracketStack = new Stack<Character>();
     int finalValue = 0, tempValue = 0;
     
-    for(int i=0; i<inputStr.length(); ++i){
+    for (int i = 0; i < inputStr.length(); ++i){
       char bracket = inputStr.charAt(i);
       if (bracket == '('){
         // 여는 괄호일 경우 2를 곱해줌
@@ -38,7 +39,7 @@ public class B2504 {
           break;
         }
         bracketStack.pop();
-        if (inputStr.charAt(i-1) == '(') {
+        if (inputStr.charAt(i - 1) == '(') {
           // 직전이 여는 괄호였다면, 계산한 값을 더해주고 2로 나누어줌
           finalValue += tempValue;
           tempValue /= 2;
