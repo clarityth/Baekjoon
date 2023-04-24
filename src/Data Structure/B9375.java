@@ -1,3 +1,4 @@
+// 패션왕 신해빈
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -11,10 +12,10 @@ public class B9375 {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     StringBuilder sb = new StringBuilder();
     int T = Integer.parseInt(br.readLine());
-    for (int i = 0; i < T; i++) {
+    for (int i = 0; i < T; ++i) {
       int n = Integer.parseInt(br.readLine());
       Map<String, Integer> catagoryMap = new HashMap<String, Integer>();
-      for (int j = 0; j < n; j++) {
+      for (int j = 0; j < n; ++j) {
         StringTokenizer st = new StringTokenizer(br.readLine());
         String clothes = st.nextToken();
         String catagory = st.nextToken();
