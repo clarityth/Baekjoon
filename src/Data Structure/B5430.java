@@ -1,3 +1,4 @@
+// AC
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -10,7 +11,7 @@ public class B5430 {
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     int T = Integer.parseInt(br.readLine());
     StringBuffer sb = new StringBuffer();
-    for(int i = 0; i < T; ++i){
+    for (int i = 0; i < T; ++i){
       String function = br.readLine();
       int n = Integer.parseInt(br.readLine());
       String arrayStr = br.readLine();
@@ -19,7 +20,7 @@ public class B5430 {
       String[] element = arrayStr.split(",");
       boolean isReversed = false, isBreaked = false;
       int firstIdx = 0, lastIdx = n-1;
-      for(int j = 0; j < function.length(); ++j){
+      for (int j = 0; j < function.length(); ++j){
         if (function.charAt(j) == 'R'){
           if (isReversed){
             isReversed = false;
@@ -49,7 +50,7 @@ public class B5430 {
         continue;
       sb.append("[");
       if (isReversed) {
-        for(int j = lastIdx; j >= firstIdx; --j){
+        for (int j = lastIdx; j >= firstIdx; --j){
           sb.append(element[j]);
           if (j != firstIdx){
             sb.append(",");
@@ -57,7 +58,7 @@ public class B5430 {
         }
       }
       else {
-        for(int j = firstIdx; j <= lastIdx; ++j){
+        for (int j = firstIdx; j <= lastIdx; ++j){
           sb.append(element[j]);
           if (j != lastIdx) {
             sb.append(",");
