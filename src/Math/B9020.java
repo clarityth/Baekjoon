@@ -1,4 +1,3 @@
-
 // 골드바흐의 추측
 import java.util.*;
 import java.io.*;
