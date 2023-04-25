@@ -22,6 +22,7 @@ public class Main {
           }
         }
       }
+      // 두 팀의 능력치 합계가 0이라면, 나올 수 있는 능력치 차이의 최솟값이므로 출력하고 즉시 종료
       int diff = Math.abs(start_stat - link_stat);
       minDiff = Math.min(minDiff, diff);
       if (minDiff == 0) {
