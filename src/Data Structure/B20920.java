@@ -1,3 +1,4 @@
+// 영단어 암기는 괴로워
 import java.io.*;
 import java.util.*;
 
@@ -10,7 +11,7 @@ public class B20920 {
     int M = Integer.parseInt(st.nextToken());
     HashMap<String, Integer> wordMap = new HashMap<String, Integer>();
     // hashMap에 <단어, 해당 단어가 등장한 횟수>를 저장
-    for (int i=0; i<N; ++i){
+    for (int i = 0; i < N; ++i){
       String word = br.readLine();
       if (word.length() >= M){
         int frequency = wordMap.getOrDefault(word, -1);
@@ -44,7 +45,7 @@ public class B20920 {
     			 return l2-l1;
     		  }
       		else {
-            for (int i=0; i<k1.length(); ++i){
+            for (int i = 0; i < k1.length(); ++i){
               if (k1.charAt(i) != k2.charAt(i))
               // 사전 순으로 정렬
                 return k1.charAt(i)-k2.charAt(i);
@@ -54,7 +55,7 @@ public class B20920 {
         return 0;
     	}
     });
-    for(Map.Entry<String, Integer> e : vocaList){
+    for (Map.Entry<String, Integer> e : vocaList){
       bw.write(e.getKey() + "\n");
     }
     bw.flush();
