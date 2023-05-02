@@ -1,3 +1,4 @@
+// 트리의 순회
 import java.io.*;
 import java.util.*;
 
@@ -9,7 +10,7 @@ public class B2263 {
     int root = postOrder[post_end];
     sb.append(root + " ");
     int rootIdx = hm.get(root);
-    // inOrder 순회에서 루트의 왼쪽에 있는 리프의 갯수
+    // left = inOrder 순회에서 루트의 왼쪽에 있는 리프의 갯수
     int left = rootIdx - in_start;
     // left sub tree
     preOrder(in_start, rootIdx - 1, post_start, post_start + left - 1);
