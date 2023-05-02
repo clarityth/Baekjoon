@@ -1,3 +1,4 @@
+// 색종이 만들기
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,8 +10,8 @@ public class Main {
 
   public static void cut(int x, int y, int size) {
     int allBlue = 1, allWhite = 1;
-    for (int i = y; i < y + size; i++) {
-      for (int j = x; j < x + size; j++) {
+    for (int i = y; i < y + size; ++i) {
+      for (int j = x; j < x + size; ++j) {
         if (paper[i][j] == 0)
           allBlue = 0;
         else
@@ -18,10 +19,10 @@ public class Main {
       }
     }
     if (allBlue == 1) {
-      blue++;
+      ++blue;
       return;
     } else if (allWhite == 1) {
-      white++;
+      ++white;
       return;
     }
     cut(x, y, size / 2); // 2사분면 탐색
@@ -34,9 +35,9 @@ public class Main {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     int N = Integer.parseInt(br.readLine());
     paper = new int[N][N];
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; ++i) {
       StringTokenizer st = new StringTokenizer(br.readLine());
-      for (int j = 0; j < N; j++) {
+      for (int j = 0; j < N; ++j) {
         paper[i][j] = Integer.parseInt(st.nextToken());
       }
     }
