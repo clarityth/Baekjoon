@@ -15,8 +15,8 @@ public class B2468 {
   public static Queue<Point> q;
   public static boolean[][] isNotSinkedArea;
   public static boolean[][] visit;
-  public static final int[] dx = {0, 0, -1, 1};
-  public static final int[] dy = {1, -1, 0, 0};
+  public static final int[] dx = { 0, 0, -1, 1 };
+  public static final int[] dy = { 1, -1, 0, 0 };
 
   public static int getSafeAreaCnt(int rain){
     q = new LinkedList<Point>();
