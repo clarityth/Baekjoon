@@ -1,3 +1,4 @@
+// 안전 영역
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -21,16 +22,16 @@ public class B2468 {
     q = new LinkedList<Point>();
     isNotSinkedArea = new boolean[N][N];
     visit = new boolean[N][N];
-    for(int i=0; i<N; ++i){
-      for(int j=0; j<N; ++j){
+    for(int i = 0; i < N; ++i){
+      for(int j = 0; j < N; ++j){
         if (rain < areaHeights[i][j]) {
           isNotSinkedArea[i][j] = true;
         }
       }
     }
     int cnt = 0;
-    for(int i=0; i<N; ++i){
-      for(int j=0; j<N; ++j){
+    for(int i = 0; i < N; ++i){
+      for(int j = 0; j < N; ++j){
         if(!visit[i][j] && isNotSinkedArea[i][j]) {
           bfs(j, i);
           ++cnt;
@@ -48,7 +49,7 @@ public class B2468 {
       Point currentPos = q.poll();
       int curX = currentPos.x;
       int curY = currentPos.y;
-      for(int k=0; k<4; ++k){
+      for(int k = 0; k < 4; ++k){
         int adjX = curX + dx[k];
         int adjY = curY + dy[k];
         if (adjX >= N || adjX < 0 || adjY >= N || adjY < 0) {
@@ -69,15 +70,15 @@ public class B2468 {
     areaHeights = new int[N][N];
     int maxHeight = 0, maxSafeAreaCnt = 1;
     // 모든 지역이 잠기지 않을 수 있으므로, maxSafeAreaCnt의 초깃값을 1로 설정
-    for(int i=0; i<N; ++i){
+    for(int i = 0; i < N; ++i){
       StringTokenizer st = new StringTokenizer(br.readLine());
-      for(int j=0; j<N; ++j){
+      for(int j = 0; j < N; ++j){
         areaHeights[i][j] = Integer.parseInt(st.nextToken());
         if (areaHeights[i][j] > maxHeight)
           maxHeight = areaHeights[i][j];
       }
     }
-    for(int i=0; i<=maxHeight; ++i){
+    for(int i = 0; i <= maxHeight; ++i){
       int safeCnt = getSafeAreaCnt(i);
       if (safeCnt > maxSafeAreaCnt)
         maxSafeAreaCnt = safeCnt;
