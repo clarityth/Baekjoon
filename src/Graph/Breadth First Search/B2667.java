@@ -1,3 +1,4 @@
+// 단지번호붙이기
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -24,7 +25,7 @@ public class B2667 {
       int[] currentPos = q.poll();
       int currentX = currentPos[0];
       int currentY = currentPos[1];
-      for (int i = 0; i < 4; i++) {
+      for (int i = 0; i < 4; ++i) {
         int nextX = currentX + dx[i];
         int nextY = currentY + dy[i];
         if (nextX < 0 || nextY < 0 || nextX >= N || nextY >= N)
@@ -40,8 +41,8 @@ public class B2667 {
   }
 
   public static void getConnectedComponent() {
-    for (int i = 0; i < N; i++) {
-      for (int j = 0; j < N; j++) {
+    for (int i = 0; i < N; ++i) {
+      for (int j = 0; j < N; ++j) {
         if (!visit[i][j] && complex[i][j] == 1) {
           numbering(j, i);
         }
@@ -56,9 +57,9 @@ public class B2667 {
     visit = new boolean[N + 1][N + 1];
     complexCnt = new ArrayList<>();
     StringBuilder sb = new StringBuilder();
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; ++i) {
       String str = br.readLine();
-      for (int j = 0; j < N; j++) {
+      for (int j = 0; j < N; ++j) {
         complex[i][j] = Character.getNumericValue(str.charAt(j));
       }
     }
