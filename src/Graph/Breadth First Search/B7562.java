@@ -1,3 +1,4 @@
+// 나이트의 이동
 import java.io.*;
 import java.util.*;
 import java.awt.Point;
@@ -56,7 +57,6 @@ public class B7562 {
       int targetY = Integer.parseInt(st.nextToken());
 
       bfs(currentX, currentY, targetX, targetY);
-      
       sb.append(board[targetY][targetX] + "\n");
     }
     bw.write(sb.toString());
