@@ -1,3 +1,4 @@
+// 영역 구하기
 import java.io.*;
 import java.util.*;
 import java.awt.Point;
