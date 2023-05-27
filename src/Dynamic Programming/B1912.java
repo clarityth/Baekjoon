@@ -1,3 +1,4 @@
+// 연속합
 import java.io.*;
 import java.util.*;
 
