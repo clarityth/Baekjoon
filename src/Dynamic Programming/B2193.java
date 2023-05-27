@@ -1,3 +1,4 @@
+// 이친수
 import java.io.*;
 import java.util.*;
 
@@ -17,7 +18,7 @@ public class B2193 {
     long[] DP = new long[N];
     DP[0] = 0l;
     DP[1] = 1l; 
-    for(int i=2; i<=N; ++i){
+    for(int i = 2; i <= N; ++i){
       DP[i] = DP[i-2] + DP[i-1];
     }
     bw.write(String.valueOf(DP[N])); 
