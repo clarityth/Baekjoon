@@ -13,9 +13,9 @@ public class B2293 {
     k = Integer.parseInt(st.nextToken());
     int coins[] = new int[n];
     int DP[] = new int[k + 1];
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i) 
       coins[i] = Integer.parseInt(br.readLine());
-    }
+  
     DP[0] = 1;
     for (int i = 0; i < n; ++i) {
       for (int j = 1; j <= k; ++j) {
