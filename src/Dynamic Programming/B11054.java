@@ -1,3 +1,4 @@
+// 가장 긴 바이토닉 부분 수열
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -17,7 +18,7 @@ public class B11054 {
     int[] leftDp = new int[N + 1];
     StringTokenizer st = new StringTokenizer(br.readLine());
     rightDp[0] = leftDp[0] = 1;
-    
+
     for (int i = 1; i <= N; ++i) 
       sequence[i] = Integer.parseInt(st.nextToken());
     
