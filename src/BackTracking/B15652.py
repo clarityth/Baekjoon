@@ -2,6 +2,7 @@ import sys
 input = sys.stdin.readline
 
 N, M = map(int, input().split())
+
 ans = []
 
 def dfs(x) :
@@ -11,7 +12,7 @@ def dfs(x) :
 
     for i in range(x, N + 1) :
         ans.append(i)
-        dfs(i)
+        dfs(i + 1)
         ans.pop()
 
 dfs(1)
