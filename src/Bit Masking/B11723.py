@@ -22,5 +22,5 @@ for _ in range(M) :
     else :
         if op == "all" :
             S = (1 << 21) - 1
-        else :
+        elif op == "empty" :
             S = 0
